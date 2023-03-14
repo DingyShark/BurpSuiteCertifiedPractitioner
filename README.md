@@ -383,6 +383,11 @@ Create CSRF PoC. Send it to victim once, wait 5-10 seconds and send it again.
 ![image](https://user-images.githubusercontent.com/58632878/225067728-0d3ceddd-4f8a-4af9-b8e9-602ea43300f6.png)  
 
 
+# Clickjacking  
+## Approach  
+Really?
+
+
 # DOM-based vulnerabilities
 ## Approach  
 My personally hated topic. Quite hard to understand, how to construct the payload. The best tip I've got for this is to use DOM-Invader Extension, it can detect this vulnerability and even, in some cases, construct right payload, but don't rely on it too much. For example, on the screenshot below you can see, that DOM-Invader got the right place for injection for ```DOM XSS using web messages and JSON.parse``` lab, so all you need is to write it in iframe tag and get alert() function.  
