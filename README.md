@@ -22,7 +22,7 @@ I made a list of potential vulnerabilities for each stage:
 
 
 **Promote yourself to an administrator or steal his data**  
-[SQL Injection](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner/edit/main/README.md#sql-injection)  
+[SQL Injection](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#sql-injection)  
 [Cross-site request forgery (CSRF)](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#cross-site-request-forgery-csrf)  
 [Insecure deserialization](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#insecure-deserialization) (Modifying serialized data types)  
 [OAuth authentication](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#oauth-authentication)  
