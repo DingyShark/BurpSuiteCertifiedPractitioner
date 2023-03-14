@@ -59,7 +59,7 @@ Kudos to https://github.com/botesjuan/ for this awesome image, that defines poss
 
 **Stage 2**  
 [JSON RoleID](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#1-user-role-can-be-modified-in-user-profile)  
-[SQL Injection](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner/edit/main/README.md#sql-injection)  
+[SQL Injection](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#sql-injection)  
 [CSRF Refresh Password isloggedin true](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#10-csrf-refresh-password-isloggedin-true)  
 [JWT](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#jwt)  
 
