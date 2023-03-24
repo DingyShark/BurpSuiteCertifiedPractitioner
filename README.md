@@ -923,10 +923,14 @@ Change it to victim's one and brute his password
 ```
 
 ### Business logic Authentication vulnerability  
-0. Authentication bypass via flawed state machine  
+1. Authentication bypass via flawed state machine  
 If you got the role-selector page, just turn On the Interception and drop this request.  
 ![image](https://user-images.githubusercontent.com/58632878/224716441-e3631b3f-472c-46aa-83b5-0c471447dbe3.png)  
 ![image](https://user-images.githubusercontent.com/58632878/224716833-d96a1ca7-105d-4de8-9bb2-997e53ac1c3b.png)  
+
+  
+2. Weak isolation on dual-use endpoint  
+Delete current-password parameter and change username to administrator  
 
 
 # WebSockets
