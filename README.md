@@ -67,6 +67,7 @@ Kudos to https://github.com/botesjuan/ for this awesome image, that defines poss
 [Admin user import via XML](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-user-import-via-xml)  
 [Path Traversal](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#directory-traversal)  
 [Admin panel - Download report as PDF SSRF](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel---download-report-as-pdf-ssrf)  
+[Admin panel - RFI](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel-rfi)  
 
 
 ## Tips
