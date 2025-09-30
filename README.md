@@ -533,7 +533,7 @@ I really recommend you to use both links below, because they can adapt XXE paylo
     </user>
 </users>
 ``` 
-
+>If .com&`nslook doesn't work, try .com$`nslookup
 
 # Server-side request forgery (SSRF)
 ## Approach
